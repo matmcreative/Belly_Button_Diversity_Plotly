@@ -1,10 +1,28 @@
 # Plot.ly Challenge - Belly Button Biodiversity
 
-![Bacteria by filterforge.com](Images/bacteria.jpg){:class="img-responsive"}
+## Table of Contents
+* [Objective](#Objective)
+* [Technologies](#Technologies)
+* [ETL](#ETL)
+* [Visualization](#Visualization)
+* [Troubleshooting](#Troubleshooting)
 
+![Bacteria by filterforge.com](Images/bacteria.jpg)
+
+# Objective | Create a Interactive Dashboard
 Build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
+
+# Technologies
+* D3
+* Plotly
+* JSON
+* Python3
+
+
+# ETL
+## Process Documentation
 
 ## Step 1: Plotly
 
