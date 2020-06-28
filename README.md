@@ -46,6 +46,7 @@ const data = d3.json(path).then(function(data) {
 
     Plotly.newPlot("bar", bardata);  
 ```
+
     * Use `sample_values` as the values for the bar chart.
 ```
     var samples = data.samples
