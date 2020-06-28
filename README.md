@@ -8,7 +8,7 @@
 * [Visualization](#Visualization)
 * [Troubleshooting](#Troubleshooting)
 
-<img src="Images/bacteria.png" width=350px align=right>
+<img src="Images/bacteria.jpg" width=350px align=right>
 
 # Objective | Create a Interactive Dashboard
 Build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
