@@ -94,6 +94,7 @@ const data = d3.json(path).then(function(data) {
 
 ![Bubble Chart](Images/bubble_chart.png)
 <img src="Images/hw03.png" width=350px align=right>
+
 * Display the sample metadata, i.e., an individual's demographic information.
 
 * Display each key-value pair from the metadata JSON object somewhere on the page.
@@ -104,8 +105,12 @@ const data = d3.json(path).then(function(data) {
 
 Deploy app to GitHub Pages. Submit the links to your deployment and your GitHub repo.
 
+
+
 # Visualization
-<img src="Images/hw03.png" width=350px align=right>
+<img src="Images/bbb_dashboard.png" width=100%>
+
+# Troubleshooting
 
 ### About the Data
 
