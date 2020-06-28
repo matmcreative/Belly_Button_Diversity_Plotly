@@ -34,6 +34,8 @@ const data = d3.json(path).then(function(data) {
 ```
 
 * Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+<img src="Images/hw01.png" width=350px align=right>
+
 ```
     //bar plot
     var bardata =[{
@@ -47,7 +49,7 @@ const data = d3.json(path).then(function(data) {
     Plotly.newPlot("bar", bardata);  
 ```
 
-    * Use `sample_values` as the values for the bar chart.
+   * Use `sample_values` as the values for the bar chart.
 ```
     var samples = data.samples
     //console.log(samples);
@@ -55,7 +57,7 @@ const data = d3.json(path).then(function(data) {
     //console.log(sample_values[0]);
 ```
     
-    * Use `otu_ids` as the labels for the bar chart.
+   * Use `otu_ids` as the labels for the bar chart.
 ```
     var top10sample_values = sample_values[0].slice(0,10).reverse();
     console.log(top10sample_values);
@@ -63,26 +65,19 @@ const data = d3.json(path).then(function(data) {
     var top10otu_ids = otu_ids[0].slice(0,10).reverse();
 ```
     
-    * Use `otu_labels` as the hovertext for the chart.
+   * Use `otu_labels` as the hovertext for the chart.
 ```
     var otu_labels = data.samples.map(sample =>sample.otu_labels);
     var top10otu_labels = otu_labels[0].slice(0,10).reverse();
     console.log(top10otu_labels);
 ```
 
-  ![bar Chart](Images/hw01.png)
-
-3. Create a bubble chart that displays each sample.
-
-* Use `otu_ids` for the x values.
-
-* Use `sample_values` for the y values.
-
-* Use `sample_values` for the marker size.
-
-* Use `otu_ids` for the marker colors.
-
-* Use `otu_labels` for the text values.
+* Create a bubble chart that displays each sample.
+   * Use `otu_ids` for the x values.
+   * Use `sample_values` for the y values.
+   * Use `sample_values` for the marker size.
+   * Use `otu_ids` for the marker colors.
+   * Use `otu_labels` for the text values.
 ```
 // bubble plot
     var bubbledata =[{
