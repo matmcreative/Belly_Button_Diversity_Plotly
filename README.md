@@ -22,18 +22,52 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Python3
 
 # Process
-
 ## Step 1: Plotly
 
-1. Use the D3 library to read in `samples.json`.
+* Read in `samples.json` using D3 library.
+```
+var path ="data/samples.json";
 
-2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+function init() {
+const data = d3.json(path).then(function(data) {    
+    console.log(data);    
+```
 
-* Use `sample_values` as the values for the bar chart.
+* Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
+```
+    //bar plot
+    var bardata =[{
+        x:top10sample_values,
+        y:top10otu_ids.map(id =>  ("OTU" + id.toString())),
+        type:"bar",
+        text:top10otu_labels,
+        orientation: "h"
+    }];
 
-* Use `otu_ids` as the labels for the bar chart.
-
-* Use `otu_labels` as the hovertext for the chart.
+    Plotly.newPlot("bar", bardata);  
+```
+    * Use `sample_values` as the values for the bar chart.
+    ```
+    var samples = data.samples
+    //console.log(samples);
+    var sample_values = samples.map(sample =>sample.sample_values);  
+    //console.log(sample_values[0]);
+    ```
+    
+    * Use `otu_ids` as the labels for the bar chart.
+    ```
+    var top10sample_values = sample_values[0].slice(0,10).reverse();
+    console.log(top10sample_values);
+    var otu_ids = data.samples.map(sample =>sample.otu_ids); 
+    var top10otu_ids = otu_ids[0].slice(0,10).reverse();
+    ```
+    
+    * Use `otu_labels` as the hovertext for the chart.
+    ```
+    var otu_labels = data.samples.map(sample =>sample.otu_labels);
+    var top10otu_labels = otu_labels[0].slice(0,10).reverse();
+    console.log(top10otu_labels);
+    ```
 
   ![bar Chart](Images/hw01.png)
 
@@ -48,6 +82,19 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Use `otu_ids` for the marker colors.
 
 * Use `otu_labels` for the text values.
+```
+// bubble plot
+    var bubbledata =[{
+        x: otu_ids[0],
+        y: sample_values[0],
+        text: otu_labels[0],
+        mode: "markers",
+        marker: {
+        size: sample_values[0],
+        color: otu_ids[0],
+        colorscale: "Earth"}
+    }];
+```
 
 ![Bubble Chart](Images/bubble_chart.png)
 
@@ -66,7 +113,7 @@ Additionally, you are welcome to create any layout that you would like for your 
 
 # Deployment
 
-Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo.
+Deploy app to GitHub Pages. Submit the links to your deployment and your GitHub repo.
 
 ### About the Data
 
