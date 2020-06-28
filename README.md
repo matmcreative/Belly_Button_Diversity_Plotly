@@ -3,7 +3,7 @@
 ## Table of Contents
 * [Objective](#Objective)
 * [Technologies](#Technologies)
-* [ETL](#ETL)
+* [Process](#Process)
 * [Visualization](#Visualization)
 * [Troubleshooting](#Troubleshooting)
 
@@ -20,8 +20,6 @@ The dataset reveals that a small handful of microbial species (also called opera
 * JSON
 * Python3
 
-
-# ETL
 ## Process Documentation
 
 ## Step 1: Plotly
