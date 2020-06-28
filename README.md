@@ -93,11 +93,10 @@ const data = d3.json(path).then(function(data) {
 ```
 
 ![Bubble Chart](Images/bubble_chart.png)
-
+<img src="Images/hw03.png" width=350px align=right>
 * Display the sample metadata, i.e., an individual's demographic information.
 
 * Display each key-value pair from the metadata JSON object somewhere on the page.
-<img src="Images/hw03.png" width=350px align=right>
 
 * Update all of the plots any time that a new sample is selected.
 
