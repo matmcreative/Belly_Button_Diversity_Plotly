@@ -94,22 +94,19 @@ const data = d3.json(path).then(function(data) {
 
 ![Bubble Chart](Images/bubble_chart.png)
 
-4. Display the sample metadata, i.e., an individual's demographic information.
+* Display the sample metadata, i.e., an individual's demographic information.
 
-5. Display each key-value pair from the metadata JSON object somewhere on the page.
+* Display each key-value pair from the metadata JSON object somewhere on the page.
+<img src="Images/hw03.png" width=350px align=right>
 
-![hw](Images/hw03.png)
-
-6. Update all of the plots any time that a new sample is selected.
-
-Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown below:
-
-![hw](Images/hw02.png)
-
+* Update all of the plots any time that a new sample is selected.
 
 # Deployment
 
 Deploy app to GitHub Pages. Submit the links to your deployment and your GitHub repo.
+
+# Visualization
+<img src="Images/hw03.png" width=350px align=right>
 
 ### About the Data
 
