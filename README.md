@@ -47,27 +47,27 @@ const data = d3.json(path).then(function(data) {
     Plotly.newPlot("bar", bardata);  
 ```
     * Use `sample_values` as the values for the bar chart.
-    ```
+```
     var samples = data.samples
     //console.log(samples);
     var sample_values = samples.map(sample =>sample.sample_values);  
     //console.log(sample_values[0]);
-    ```
+```
     
     * Use `otu_ids` as the labels for the bar chart.
-    ```
+```
     var top10sample_values = sample_values[0].slice(0,10).reverse();
     console.log(top10sample_values);
     var otu_ids = data.samples.map(sample =>sample.otu_ids); 
     var top10otu_ids = otu_ids[0].slice(0,10).reverse();
-    ```
+```
     
     * Use `otu_labels` as the hovertext for the chart.
-    ```
+```
     var otu_labels = data.samples.map(sample =>sample.otu_labels);
     var top10otu_labels = otu_labels[0].slice(0,10).reverse();
     console.log(top10otu_labels);
-    ```
+```
 
   ![bar Chart](Images/hw01.png)
 
