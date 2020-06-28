@@ -8,22 +8,22 @@ const data = d3.json(path).then(function(data) {
     // setting all samples ID on the dropdownmenu by appending(IDS) to option 
     const names = data.names;
      //d3.event.preventDefault();
-     var dropdownMenu = d3.select("#selDataset");
+     let dropdownMenu = d3.select("#selDataset");
 
      names.forEach(name => { 
      //console.log(name);
-     var option = dropdownMenu.append("option");
+     let option = dropdownMenu.append("option");
      option.text(name);
     });
  
  //Demography Info
-    var metaData = data.metadata;
+    let metaData = data.metadata;
     // applying the first sample metadata to set demographic Info
-    var metaData1 =(metaData[0])
+    let metaData1 =(metaData[0])
         console.log(metaData1);
-    var wfreq =metaData1.wfreq
+    let wfreq =metaData1.wfreq
         //console.log(wfreq);
-    var demography = d3.select("#sample-metadata");
+    let demography = d3.select("#sample-metadata");
         demography.html(" ");
     Object.entries(metaData1).forEach(([key, value]) =>{
             var row = demography.append("h5");
@@ -32,22 +32,22 @@ const data = d3.json(path).then(function(data) {
 
 // plots
     // using first sample to plot
-    var samples = data.samples
+    let samples = data.samples
     //console.log(samples);
-    var sample_values = samples.map(sample =>sample.sample_values);  
+    let sample_values = samples.map(sample =>sample.sample_values);  
     //console.log(sample_values[0]);
-    var top10sample_values = sample_values[0].slice(0,10).reverse();
+    let top10sample_values = sample_values[0].slice(0,10).reverse();
     console.log(top10sample_values);
-    var otu_ids = data.samples.map(sample =>sample.otu_ids); 
-    var top10otu_ids = otu_ids[0].slice(0,10).reverse();
+    let otu_ids = data.samples.map(sample =>sample.otu_ids); 
+    let top10otu_ids = otu_ids[0].slice(0,10).reverse();
     
-    var otu_labels = data.samples.map(sample =>sample.otu_labels);
-    var top10otu_labels = otu_labels[0].slice(0,10).reverse();
+    let otu_labels = data.samples.map(sample =>sample.otu_labels);
+    let top10otu_labels = otu_labels[0].slice(0,10).reverse();
     console.log(top10otu_labels);
     
     
     //bar plot
-    var bardata =[{
+    let bardata =[{
         x:top10sample_values,
         y:top10otu_ids.map(id =>  ("OTU" + id.toString())),
         type:"bar",
@@ -62,7 +62,7 @@ const data = d3.json(path).then(function(data) {
 
 
     // bubble plot
-    var bubbledata =[{
+    let bubbledata =[{
         x: otu_ids[0],
         y: sample_values[0],
         text: otu_labels[0],
@@ -73,7 +73,7 @@ const data = d3.json(path).then(function(data) {
         colorscale: "Earth"}
     }];
 
-    var bubbleLayout = {
+    let bubbleLayout = {
         margin: { t: 0 },
         hovermode: "closests",
         xaxis: { title: "OTU ID"}
@@ -85,7 +85,7 @@ const data = d3.json(path).then(function(data) {
 
     //gauge plot
 
-    var gaugedata =[{
+    let gaugedata =[{
         domain:{x:[0,1],y:[0,1]},
         value:parseFloat(wfreq),
         title:{text: "Weekly washing Frequency"},
@@ -105,7 +105,7 @@ const data = d3.json(path).then(function(data) {
                 }
         }];
 
-    var gaugelayout = {
+    let gaugelayout = {
         width:700,
         height: 600, 
         margin: { t: 30, b: 50, l:100, r:100 } 
