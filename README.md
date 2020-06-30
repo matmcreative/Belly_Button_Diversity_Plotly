@@ -103,7 +103,7 @@ const data = d3.json(path).then(function(data) {
 
 # Deployment
 
-Deploy app to GitHub Pages. Submit the links to your deployment and your GitHub repo.
+Deploy app to GitHub Pages.
 
 
 
